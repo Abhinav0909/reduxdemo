@@ -1,10 +1,14 @@
 import './App.css';
-import Home from './Pages/Home/Home'
+import Header from './components/Header/Header'
+import Main from "./Main"
+import {Provider} from "react-redux";
+import store from './store.js';
 function App() {
   return (
-    <div >
-      <Home/>
-    </div>
+    <Provider store={store} >
+      <Header/>
+      <Main/>
+    </Provider>
   );
 }
 
